@@ -43,7 +43,7 @@ function calculate(code, year, month, day, hour) {
   const dataLines = lines.slice(1);
 
   const filtered = dataLines.filter(line => {
-    if (!line.trim()) return false;
+    if (!line.trim()) return false; // 空行や空白のみの行を削除
     const [timeStr, lineCode, price] = line.split(',');
 
     if (lineCode !== code) return false;
